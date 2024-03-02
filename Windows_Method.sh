@@ -6,11 +6,8 @@
 #
 # Conda was used as the package manager in this case and the following commands
 # work for windows subsystem for linux (WSL). 
-# Where a code line changes between systems (Windows vs Mac) there will be a 
-# comment denoting this change.
 
-## Software versions used in this code
-# For windows method 
+## Software versions used in this code (Windows method) 
 # Windows 11 Home V 10.0.22631 Build 22631
 # Terminal (Windows subsystem for Linux - Ubuntu) V2.0.9.0
 # conda V23.10.0
@@ -18,16 +15,17 @@
 # tabix (gzip) V1.19.1
 # samtools V1.19.2
 
+
 ## Starter files (gff not required)
 
-## Reference genome fasta file
+# Reference genome fasta file
 # C_excelsa_V5.fasta
 
-## VCFs of populations tested (for diploid and tetraploid)
+# VCFs of populations tested (for diploid and tetraploid)
 # UK_scan_dips.vcf
 # UK_scan_tets.vcf
 
-## GFF file of the reference genome (not required)
+# GFF file of the reference genome (not required)
 # C_excelsa_V5_braker2_wRseq.gff3
 
 
@@ -41,7 +39,7 @@ source /home/sam/miniconda3/etc/profile.d/conda.sh
 ## 1) Set up Bcftools environment in conda
 
 #create bcftools environment (including tabix as well for compression)
-#conda create -n bcftools_env bcftools tabix
+conda create -n bcftools_env bcftools tabix
 
 #activate environment
 conda activate bcftools_env
@@ -66,7 +64,7 @@ bcftools index -t filtered_UK_scan_tets.vcf.gz
 conda deactivate
 
 # create samtools environment
-#conda create -n samtools samtools
+conda create -n samtools samtools
 
 # activate the samtools environment
 conda activate samtools
