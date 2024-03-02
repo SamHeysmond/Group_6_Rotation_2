@@ -18,21 +18,18 @@
 # tabix (gzip) V1.19.1
 # samtools V1.19.2
 
-# For MAC method
-# MAC OS V12.6.5
-# Terminal V 2.12.7
-# conda V23.9.0
-# bcftools V1.11
-# samtools V1.3.1
-# vcftools V0.1.16
+## Starter files (gff not required)
 
-## FILES NEEDED
-#VCFs
+## Reference genome fasta file
+# C_excelsa_V5.fasta
+
+## VCFs of populations tested (for diploid and tetraploid)
 # UK_scan_dips.vcf
 # UK_scan_tets.vcf
 
-# Reference sequence
-# C_excelsa_V5.fasta
+## GFF file of the reference genome (not required)
+# C_excelsa_V5_braker2_wRseq.gff3
+
 
 ## Adding conda to path
 export PATH=/home/sam/miniconda3/condabin/conda:$PATH
