@@ -1,0 +1,92 @@
+Introduction_________________
+
+We have been assigned two proteins from a selection scan that showed positive selection in tetraploid Cochleria officinalis compared to the diploid Cochlearia pyrenica. The task we have is to analyse the differences in these two key proteins between two species of cochleria (diploid and tetraploid) to uncover any differences within them that may lead to this positive selection. In summary, we start with some sequence data and hope to end up with structural data that we can interpret visually and through scientific studies to compare and contrast the proteins in both diploid and tetraploid states, concluding on any differences we may find.
+
+
+Timeline_____________________
+
+1) 
+We begin with the following files:
+    file 1) C_excelsa_V5.fasta (reference genome for Arabidopsis Thaliana)
+    file 2) C_excelsa_V5_braker2_wRseq.gff3 (A gff file based on this reference sequence above)
+    file 3) UK_scan_dips.vcf (A vcf file containing population data from diploid Cochleria species pyrenica)
+    file 4) UK_scan_tets.vcf (A vcf file containing population data from tetraploid Cochleria species officinalis)
+    file 5) g38026.pdf selection scan graph of our first protein of interest
+    file 6) g32580.pdf selection scan graph of our second protein of interest
+
+1.1) 
+	We first search the gff file with the gene IDs given in the pdf file names e.g. g38026. In my case I used notepad on windows 11 (VERSION PENDING)
+
+1.1- software versions needed- Windows)
+	# Windows
+
+1.1- software versions needed - MAC)
+	# MAC
+
+1.1- Expected outcome) 
+	By doing this on MAC or WINDOWS machines with any text editor that has search functions, you should find that there will be a row
+which shows the ID being equal to your search, and the label of "gene" with the appropriate start and end positions. 
+These positions of each gene (for each protein) can be noted down for the next stage of analysis.
+
+
+2) 
+	We then need to create a consensus sequence of the Cochleria species (both diploid and tetraploid) at the specified gene locations we just uncovered.
+The steps for this analysis are outlined in the code files WINDOWS_consensus.sh or MAC_consensus.sh.
+
+2- software versions needed- Windows AND MAC)
+	# Described in the relevant bash files WINDOWS_consensus.sh or MAC_consensus.sh
+
+2- Expected outcome) 
+	By following the code files you should end up with 4 files that can be used for further steps of analysis (as well as unnecessary extra files that you can ignore for now). Or if you choose to analyse a different number of proteins, then you will have 2x the number of proteins you wish to analyse (in both diploid and tetraploid form for each).
+These four files we expect (for 2 proteins) consist of the following
+	# Consensus sequence fasta file for protein one in diploid form (e.g. protein1_diploid.fa)
+	# Consensus sequence fasta file for protein one in tetraploid form (e.g. protein1_tetraploid.fa)
+	# Consensus sequence fasta file for protein two in diploid form (e.g. protein2_diploid.fa)
+	# Consensus sequence fasta file for protein two in diploid form (e.g. protein2_tetraploid.fa)
+
+3) With these sequence files obtained previously, we now look to translate them to amino acids and discover any proteins/reading frames they contain. To do this we pasted each sequence separately into a protein ORF finder website (listed below by ncbi), setting the minimal ORF length to 30 (the lowest setting)
+
+3- software version needed -Windows OR Mac)
+	website for ORF finding - https://www.ncbi.nlm.nih.gov/orffinder/
+
+3- expected outcome)
+	You should get a highlighted output that will show each reading frame of each direction of your newly translated sequence (into amino acids).
+You will need to select the most appropriate reading frame from this stage for further analysis (we picked the largest and cleanest reading frames but if you find nothing from them later you may need to come back and select a different reading frame)
+In our case we obtained 4 individual protein sequences from the whole gene that each encode for a protein. We recommend you note these down to save them from the website.
+
+4) 
+	Taking the most appropriate reading frames from your proteins you can then (from the same website) run a pBLAST search to get an idea of the potential proteins you are dealing with. Ensure you select the correct protein database (we used Swissprot). 
+
+4- Software needed)
+	# website for ORF finding - https://www.ncbi.nlm.nih.gov/orffinder/
+	# website for pBLAST - https://blast.ncbi.nlm.nih.gov/Blast.cgi
+4 - Expected outcome)
+	You should get a list of similar proteins to your sequence (possibly homologues) that may give you an idea of the protein you are dealing with. However, should you not find anything or have terrible matches, it is possible you selected the wrong ORF and will need to go back to step (3) (but it may be an undiscovered/undocumented protein). From here you can note down/save any links to high matching homologues if you wish to investigate them further in later stages.
+
+5) 
+	Using the protein sequence deduced by ORF finder in step (3), you can then use Alphafold to structure your proteins in 3D for analysis. This step may take some time so the sooner you start the better! First you will need to access Alphafold colab online notebook (link listed below). Paste in your protein sequence e.g. the protein1 diploid protein sequence. Give your job a memorable name, for ours we termed them <ProteinName>_<diploid/tetraploid>. Select the appropriate save settings e.g. "save_all" or "save_to_google_drive". We only ticked "save_all". You can then click at the top hotbar of the webpage that says "Runtime" then click "Run all".
+
+5- Software needed)
+	# webside for Alphafold hosting - https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
+
+5- Expected outcome)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
