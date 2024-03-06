@@ -29,17 +29,32 @@
 
 ### UNIX_TOOLS (WINDOWS) ###################################################################################
 
-conda
-samtools
-bcftools
-tabix
+##conda
+# github - https://github.com/conda/conda?tab=readme-ov-file#installation
+# literature -
 
+##samtools
+# github - https://github.com/samtools/samtools
+# literature - https://doi.org/10.1093/bioinformatics/btp352
+
+## bcftools
+# github - https://github.com/samtools/bcftools
+# literature - https://doi.org/10.1093%2Fbioinformatics%2Fbtr509
+
+## tabix
+# github - https://github.com/samtools/tabix
+# literature - https://doi.org/10.1093/bioinformatics/btq671
 
 ### APPLICATIONS (WINDOWS) ######################################################################################
 
-jalview
-PYMOL
+## Jalview
+# link - https://www.jalview.org/download/
+# version - 2.11.2.0
 
+## PYMOL
+# link (download) - https://pymol.org/2/
+# link (education licence) - https://pymol.org/edu/
+# version - 2.5.8
 
 ### UNIX_TOOLS (MAC) ######################################################################################
 
@@ -47,5 +62,12 @@ PYMOL
 
 
 ### APPLICATIONS (MAC) ######################################################################################
-jalview - 2.11.3.2
-PYMOL - 2.5.8
+## Jalview 
+# link - https://www.jalview.org/download/
+# version - 2.11.3.2
+
+
+## PYMOL
+# link (download) - https://pymol.org/2/
+# link (education licence) - https://pymol.org/edu/
+# version - 2.5.8

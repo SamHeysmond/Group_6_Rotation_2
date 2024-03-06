@@ -119,10 +119,12 @@ We selected the most appropriate reading frame from this stage for further analy
 
 
 7 - Perform clustal Omega alignment)
-	We found one well annotated homologue in humans in the pdb termed 8SXU. Taking the fasta file and pdb file of this protein structure we used clustal omega to align our reference, diploid, tetraploid and homologue in humans all together in one alignment
+	We found one well annotated homologue in humans in the pdb termed 8SXU. Taking the fasta file and pdb file of this protein structure we used clustal omega to align our reference, diploid, tetraploid and homologue in humans all together in one alignment.
 
 7.1 - Files (Input)
-
+	# homologue fasta sequence- rcsb_pdb_8SXU.fasta 
+	# our protein sequences - protein_sequences.txt
+	
 
 7.2 - Software needed)
 	#clustal omega website - 
