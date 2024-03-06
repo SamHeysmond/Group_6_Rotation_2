@@ -67,10 +67,35 @@ In our case we obtained 4 individual protein sequences from the whole gene that 
 	Using the protein sequence deduced by ORF finder in step (3), you can then use Alphafold to structure your proteins in 3D for analysis. This step may take some time so the sooner you start the better! First you will need to access Alphafold colab online notebook (link listed below). Paste in your protein sequence e.g. the protein1 diploid protein sequence. Give your job a memorable name, for ours we termed them <ProteinName>_<diploid/tetraploid>. Select the appropriate save settings e.g. "save_all" or "save_to_google_drive". We only ticked "save_all". You can then click at the top hotbar of the webpage that says "Runtime" then click "Run all".
 
 5- Software needed)
-	# webside for Alphafold hosting - https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
+	# website for Alphafold hosting - https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
 
 5- Expected outcome)
 
+
+6)
+	Whilst the alphafold was running we searched the web using the same input protein sequences to find homologues in protein databases for structural comparison, mainly through the protein databand (pdb)
+
+6 - Software needed)
+	# website for protein searching
+
+6- Expected outcome)
+
+7)
+	We found one well annotated homologue in humans in the pdb termed 8SXU. Taking the fasta file and pdb file of this protein structure we used clustal omega to align our reference, diploid, tetraploid and homologue in humans all together in one alignment
+
+7- Software needed)
+	#clustal omega website - 
+	#jalview application -
+
+7- Expected outcome)
+	We obtained an alignment between the four sequences which was able to tell us the highly conserved regions as well as give us a direct sequence to sequence comparison of our proteins (diploid and tetraploid) vs the homologue in the paper. This would allow us to map mutations and functions described in the paper onto our protein as potential changes of function.....
+
+
+8) 
+	Once the protein structure prediction has finished, take the pdb files and input them into a structural visualisation app, in our case we used PYMOL. From here we were able to label and colour our structure as well as compare it to other homologues to discern any differences in functon that may be occuring between diploid and tetraploid species.
+
+8- Software needed)
+	# App for visualising proteins in 3D - PYMOL V2.5.8
 
 
 
