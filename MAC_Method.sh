@@ -32,7 +32,6 @@ source /home/sam/miniconda3/etc/profile.d/conda.sh
 ## 1.2) install all software needed to base conda environment
 conda install -c bioconda samtools
 conda install -c bioconda bcftools
-conda install -c bioconda vcftools
 
 ## 2) activate conda base environment
 conda activate

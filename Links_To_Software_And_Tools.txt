@@ -4,31 +4,48 @@
 # The information for unix tools and applications contains the version data used by the windows/MAC version described below.
 
 
-### WEBSITES ###
+### WEBSITES ######################################################################################
+
+##orf finder
+# link - 
+# accession date - 26/08/2024
+
+##pdb
+# link - https://www.rcsb.org/
+# accession date - 28/02/2024
+
+##clustal omega 
+# link - https://www.ebi.ac.uk/jdispatcher/msa/clustalo
+# accession date - 
+
+## alphafold (hosted by colabs)
+# link - https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
+# accession date - 28/02/2024
+
+##BLASTp
+# link - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins
+# accession date -
+
+
+### UNIX_TOOLS (WINDOWS) ###################################################################################
+
+conda
+samtools
+bcftools
+tabix
+
+
+### APPLICATIONS (WINDOWS) ######################################################################################
+
+jalview
+PYMOL
+
+
+### UNIX_TOOLS (MAC) ######################################################################################
 
 
 
 
-
-### UNIX_TOOLS (WINDOWS) ###
-
-
-
-
-
-
-
-### APPLICATIONS (WINDOWS) ###
-
-
-
-
-
-### UNIX_TOOLS (MAC) ###
-
-
-
-
-### APPLICATIONS (MAC) ###
-
-
+### APPLICATIONS (MAC) ######################################################################################
+jalview - 2.11.3.2
+PYMOL - 2.5.8
