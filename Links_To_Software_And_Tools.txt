@@ -31,7 +31,7 @@
 
 ##conda
 # github - https://github.com/conda/conda?tab=readme-ov-file#installation
-# literature -
+# literature - N/A
 
 ##samtools
 # github - https://github.com/samtools/samtools
@@ -58,7 +58,25 @@
 
 ### UNIX_TOOLS (MAC) ######################################################################################
 
+##conda
+# github - https://github.com/conda/conda?tab=readme-ov-file#installation
+# literature - N/A
+# version - 23.9.0
 
+##samtools
+# github - https://github.com/samtools/samtools
+# literature - https://doi.org/10.1093/bioinformatics/btp352
+# version - 1.3.1
+
+## bcftools
+# github - https://github.com/samtools/bcftools
+# literature - https://doi.org/10.1093%2Fbioinformatics%2Fbtr509
+# version - 1.11
+
+## tabix
+# github - https://github.com/samtools/tabix
+# literature - https://doi.org/10.1093/bioinformatics/btq671
+# version - 
 
 
 ### APPLICATIONS (MAC) ######################################################################################

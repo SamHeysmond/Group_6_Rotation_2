@@ -17,10 +17,10 @@ We begin with the files listed below and search the gff file with the gene IDs g
     #file 6) g32580.pdf selection scan graph of our second protein of interest
 
 1.2 - software versions needed- Windows)
-	# Windows
+	# Windows notepad
 
 1.3 - software versions needed - MAC)
-	# MAC
+	# MAC notepad???
 
 1.4- Expected outcome) 
 	By doing this on MAC or WINDOWS machines with any text editor that has search functions, we find a row which shows the ID being equal to our search, and the label of "gene" with the appropriate start and end positions. 
@@ -134,7 +134,8 @@ We selected the most appropriate reading frame from this stage for further analy
 	We obtained an alignment between the four sequences which was able to tell us the highly conserved regions as well as give us a direct sequence to sequence comparison of our proteins (diploid and tetraploid) vs the homologue in the paper. This would allow us to map mutations and functions described in the paper onto our protein as potential changes of function.....
 
 7.4 - Files (Output)
-
+	# CASP protein alignment- Casp.aln
+	# Mystery protein alignment (containing 8sxu aligned to both diploid and tetraploid versions of our mystery protein) - Mystery.aln
 
 8 - Model protein pdb in PYMOL) 
 	Once the protein structure prediction has finished, take the pdb files and input them into a structural visualisation app, in our case we used PYMOL. From here we were able to label and colour our structure as well as compare it to other homologues to discern any differences in functon that may be occuring between diploid and tetraploid species.
