@@ -1,52 +1,56 @@
 Introduction_________________
 
-We have been assigned two proteins from a selection scan that showed positive selection in tetraploid Cochleria officinalis compared to the diploid Cochlearia pyrenica. The task we have is to analyse the differences in these two key proteins between two species of cochleria (diploid and tetraploid) to uncover any differences within them that may lead to this positive selection. In summary, we start with some sequence data and hope to end up with structural data that we can interpret visually and through scientific studies to compare and contrast the proteins in both diploid and tetraploid states, concluding on any differences we may find.
+We have been assigned two proteins from a selection scan that showed positive selection in tetraploid Cochleria officinalis compared to the diploid Cochlearia pyrenica. The task we have is to analyse the differences in these two key proteins between two species of cochleria (diploid and tetraploid) to uncover any differences within them that may lead to this positive selection. In summary, we start with some sequence data and hope to end up with structural data that we can interpret visually, and through scientific studies, to compare and contrast the proteins in both diploid and tetraploid states.
 
 
 Timeline_____________________
 
-1) 
-We begin with the following files:
-    file 1) C_excelsa_V5.fasta (reference genome for Arabidopsis Thaliana)
-    file 2) C_excelsa_V5_braker2_wRseq.gff3 (A gff file based on this reference sequence above)
-    file 3) UK_scan_dips.vcf (A vcf file containing population data from diploid Cochleria species pyrenica)
-    file 4) UK_scan_tets.vcf (A vcf file containing population data from tetraploid Cochleria species officinalis)
-    file 5) g38026.pdf selection scan graph of our first protein of interest
-    file 6) g32580.pdf selection scan graph of our second protein of interest
+1 - Find genes in reference file) 
+We begin with the files listed below and search the gff file with the gene IDs given in the pdf file names (g38026 and g32580 for our CASP1 and mystery gene respectively).
 
-1.1) 
-	We first search the gff file with the gene IDs given in the pdf file names e.g. g38026. In my case I used notepad on windows 11 (VERSION PENDING)
+1.1 - Files (input)
+    #file 1) C_excelsa_V5.fasta (reference genome for Arabidopsis Thaliana)
+    #file 2) C_excelsa_V5_braker2_wRseq.gff3 (A gff file based on this reference sequence above)
+    #file 3) UK_scan_dips.vcf (A vcf file containing population data from diploid Cochleria species pyrenica)
+    #file 4) UK_scan_tets.vcf (A vcf file containing population data from tetraploid Cochleria species officinalis)
+    #file 5) g38026.pdf selection scan graph of our first protein of interest
+    #file 6) g32580.pdf selection scan graph of our second protein of interest
 
-1.1- software versions needed- Windows)
+1.2 - software versions needed- Windows)
 	# Windows
 
-1.1- software versions needed - MAC)
+1.3 - software versions needed - MAC)
 	# MAC
 
-1.1- Expected outcome) 
-	By doing this on MAC or WINDOWS machines with any text editor that has search functions, you should find that there will be a row
-which shows the ID being equal to your search, and the label of "gene" with the appropriate start and end positions. 
+1.4- Expected outcome) 
+	By doing this on MAC or WINDOWS machines with any text editor that has search functions, we find a row which shows the ID being equal to our search, and the label of "gene" with the appropriate start and end positions. 
 These positions of each gene (for each protein) can be noted down for the next stage of analysis.
 
 
-2) 
+2 - Consensus sequence creation) 
 	We then need to create a consensus sequence of the Cochleria species (both diploid and tetraploid) at the specified gene locations we just uncovered.
 The steps for this analysis are outlined in the code files WINDOWS_consensus.sh or MAC_consensus.sh.
 
-2- software versions needed- Windows AND MAC)
+2.1 Files (input)
 	# Described in the relevant bash files WINDOWS_consensus.sh or MAC_consensus.sh
 
-2- Expected outcome) 
-	By following the code files you should end up with 4 files that can be used for further steps of analysis (as well as unnecessary extra files that you can ignore for now). Or if you choose to analyse a different number of proteins, then you will have 2x the number of proteins you wish to analyse (in both diploid and tetraploid form for each).
-These four files we expect (for 2 proteins) consist of the following
+2.2 software versions needed- Windows AND MAC)
+	# Described in the relevant bash files WINDOWS_consensus.sh or MAC_consensus.sh
+
+2.3 Expected outcome) 
+	By following the appropriate code file we end up with 4 files that can be used for further steps of analysis (as well as unnecessary extra files that can be ignored for now). If you choose to analyse a different number of proteins, then you will have 2x the number of proteins you wish to analyse (obtaining both diploid and tetraploid outputs for each protein).
+
+2.4 Files (output)
+These four files we expect (for our 2 proteins) consist of the following:
 	# Consensus sequence fasta file for protein one in diploid form (e.g. protein1_diploid.fa)
 	# Consensus sequence fasta file for protein one in tetraploid form (e.g. protein1_tetraploid.fa)
 	# Consensus sequence fasta file for protein two in diploid form (e.g. protein2_diploid.fa)
 	# Consensus sequence fasta file for protein two in diploid form (e.g. protein2_tetraploid.fa)
 
-3) With these sequence files obtained previously, we now look to translate them to amino acids and discover any proteins/reading frames they contain. To do this we pasted each sequence separately into a protein ORF finder website (listed below by ncbi), setting the minimal ORF length to 30 (the lowest setting)
+3- translate DNA to protein sequence)
+	With these sequence files obtained previously, we now look to translate them to amino acids and discover any proteins/reading frames they contain. To do this we pasted each sequence separately into a protein ORF finder website (listed below by ncbi), setting the minimal ORF length to 30 (the lowest setting)
 
-3- software version needed -Windows OR Mac)
+3- software needed -Windows OR Mac)
 	website for ORF finding - https://www.ncbi.nlm.nih.gov/orffinder/
 
 3- expected outcome)

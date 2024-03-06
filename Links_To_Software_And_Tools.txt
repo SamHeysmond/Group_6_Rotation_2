@@ -1,0 +1,34 @@
+### FILE INFO
+# This file contains information on the software/tools/websites used in our timeline of steps.
+# The information for websites contains the links and accession dates
+# The information for unix tools and applications contains the version data used by the windows/MAC version described below.
+
+
+### WEBSITES ###
+
+
+
+
+
+### UNIX_TOOLS (WINDOWS) ###
+
+
+
+
+
+
+
+### APPLICATIONS (WINDOWS) ###
+
+
+
+
+
+### UNIX_TOOLS (MAC) ###
+
+
+
+
+### APPLICATIONS (MAC) ###
+
+
