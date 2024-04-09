@@ -26,8 +26,8 @@
 ## 1) Setting up environment
 
 ## 1.1) Adding conda to environment
-export PATH=/home/sam/miniconda3/condabin/conda:$PATH
-source /home/sam/miniconda3/etc/profile.d/conda.sh
+export PATH=/Users/yaz/miniconda3/condabin:$PATH
+source /Users/yaz/miniconda3/etc/profile.d/conda.sh
 
 ## 1.2) install all software needed to base conda environment
 conda install -c bioconda samtools
