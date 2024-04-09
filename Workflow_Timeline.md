@@ -5,7 +5,7 @@ We have been assigned two proteins from a selection scan that showed positive se
 # Timeline
 
 > ##  1 - Find genes in reference file
-+ We begin with the files listed below and search the gff file with the gene IDs given in the pdf file names (g38026 and g32580 for our CASP1 and mystery gene respectively).
++ We begin with the files listed below and search the gff3 file with the gene IDs given in the pdf file names (g38026 and g32580 for our CASP1 and mystery gene respectively). These can be searched for in any text editor with a search function.
 
 > ## 1.1 - Files (input)
 + file 1) C_excelsa_V5.fasta (reference genome for Arabidopsis Thaliana)
@@ -22,7 +22,7 @@ We have been assigned two proteins from a selection scan that showed positive se
 + MAC TextEdit
 
 > ## 1.4- Expected outcome
-+ By doing this on MAC or WINDOWS machines with any text editor that has search functions, we find a row which shows the ID being equal to our search, and the label of "gene" with the appropriate start and end positions. 
++ By doing this on MAC or WINDOWS machines with the suggested text editors, we find a row which shows the ID being equal to our search, and the label of "gene" with the appropriate start and end positions. 
 These positions of each gene (for each protein) can be noted down for the next stage of analysis.
 
 ---
@@ -60,11 +60,11 @@ These four files we expect (for our 2 proteins) consist of the following:
 ---
 > ## 3.2 - software needed -Windows OR Mac
 + website for ORF finding - https://www.ncbi.nlm.nih.gov/orffinder/
-
++ accession info in file References_to_tools_and_data.md
 ---
 > ## 3.3 - expected outcome
 + We get a highlighted output that will show each reading frame of each direction of the newly translated sequence (into amino acids).
-+ We selected the most appropriate reading frame from this stage for further analysis. We picked the largest and cleanest reading frames that when BLASTed (step4) were identified as some kind of protein. We saved the outputs into one file "protein_sequences.txt". For CASP1 we pasted orf8 and orf9 together but for the unknown protein we just pasted in the whole of orf1.
++ We selected the most appropriate reading frame from this stage for further analysis. We picked the largest and cleanest reading frames that when BLASTed in step4 (the next step) were identified as proteins. We saved the outputs into one file "protein_sequences.txt". For CASP1 we pasted orf8 and orf9 together but for the unknown protein we just pasted in the whole of orf1.
 
 ---
 > ## 3.4 - Files (output)
@@ -79,13 +79,13 @@ These four files we expect (for our 2 proteins) consist of the following:
 + protein_sequences.txt
 
 ---
-> ## 4- Software needed
+> ## 4.2 Software needed
 + website for ORF finding - https://www.ncbi.nlm.nih.gov/orffinder/
 + website for pBLAST - https://blast.ncbi.nlm.nih.gov/Blast.cgi
 
 ---
-> ## 4 - Expected outcome
-+ You should get a list of similar proteins to your sequence (possibly homologues) that may give you an idea of the protein you are dealing with. However, should you not find anything or have terrible matches, it is possible you selected the wrong ORF and will need to go back to step (3) (but it also may be an undiscovered/undocumented protein). From here you can note down/save any links to high matching homologues if you wish to investigate them further in later stages. For our CASP protein we found homologues in other CASP1 sequences (including arabidopsis) but domain information was uncharacterized. We found that our mystery protein was similar to LINE-1 retrotransposable element ORF2 protein in humans (so we noted this down and used this to aid our search for structures to compare to in step8).
+> ## 4.3 Expected outcome
++ You should get a list of similar proteins to your sequence (possibly homologues) that may give you an idea of the protein you are dealing with. However, should you not find anything or have terrible matches, it is possible you selected the wrong ORF and will need to go back to step3 (but it also may be an undiscovered/undocumented protein). From here you can note down/save any links to high matching homologues if you wish to investigate them further in later stages. For our CASP protein we found homologues in other CASP1 sequences (including arabidopsis) but domain information was uncharacterized. We found that our mystery protein was similar to LINE-1 retrotransposable element ORF2 protein in humans, from positions 10-237; we noted this down and used this to aid our search for structures to compare to in step8. It was also similar to Rnase_H_like domain but at different positions, 462-582.
 
 ---
 > ## 5 - construct 3D models with Alphafold 
@@ -93,15 +93,16 @@ These four files we expect (for our 2 proteins) consist of the following:
 
 ---
 > ## 5.1 Files (input)
-+ protein_sequences.txt
++ protein_sequences.txt (specific sequences)
 
 ---
 > ## 5- Software needed
 + website for Alphafold hosting - https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb
++ Accession info in References_to_tools_and_data.md
 
 ---
 > ## 5- Expected outcome
-+ We obtain a zip file containing the models and graphs for each sequence we entered. From these we could take the rank 1 pdb model for each protein sequence (best prediction), copy it out and rename it appropriately (shown in output files).
++ We obtain a zip file containing the models and graphs for each sequence we entered. From these we could take the rank 1 pdb model for each protein sequence (best prediction), copy it out and rename it appropriately (shown in output files below).
 
 ---
 > ## 5.4 Files (output)
@@ -121,33 +122,44 @@ These four files we expect (for our 2 proteins) consist of the following:
 ---
 > ## 6 - Software needed
 + website for protein searching - https://www.rcsb.org/
-
++ Accession info in References_to_tools_and_data.md
 ---
 > ## 6- Expected outcome
-+ For CASP_1 we found no crystal structures. However, when enabling computer generated models we found similar models to our own alphafold model, but with no attached papers and no information on domains/key residues. For our unknown protein we found similar structures in humans (8SXU) and followed the link to their paper. 8SXU only supplied a model from around 245aa onwards so we needed another protein model to fit to the start of our protein. For this we used 7n8s which is an L1-EN domain from human L1 retrotransposon in humans.
++ For CASP_1 we found no crystal structures. However, when enabling computer generated models we found similar models to our own alphafold model, but with no attached papers and no information on domains/key residues. For our unknown protein we found similar structures in humans (8SXU and 8SXT) and followed the link to their paper. 8SXU only supplied a model from around 245aa onwards so we needed another protein model to fit to the start of our protein. For this we used 7n8s which is an L1-EN domain from human L1 retrotransposon in humans, and was similar to our protein from regions 10-237, roughly matching the area we were missing.
 
 ---
 > ## 6 - Files (output)
-+ 8SXU paper link for mystery protein -
-+ ??? paper link for mystery protein
++ We saved the links to the papers for both structures of:
+  + 8SXU  
+  + 7n8s 
 
 + Files from 8SXU protein structure :
   + fasta sequence - rcsb_pdb_8SXU.fasta 
   + stucture file - 8sxu.pdb 
 
++ Files from 7n8s protein structure :
+  + fasta sequence - rcsb_pdb_7n8s.fasta 
+  + stucture file - 7n8s.pdb 
+
 ---
 > ## 7 - Perform clustal Omega alignment
-+ We found one well annotated homologue in humans in the pdb termed 8SXU. Taking the fasta file and pdb file of this protein structure we used clustal omega to align our reference, diploid, tetraploid and homologue in humans all together in one alignment.
++ We found two well annotated homologues in humans in the pdb termed 8SXU and 8SXT. Taking the fasta file and pdb file of 8SXU protein structure we used clustal omega to align our reference, diploid, tetraploid and homologue in humans all together in one alignment.
 
 ---
 > ## 7.1 - Files (Input)
-+ homologue fasta sequence- rcsb_pdb_8SXU.fasta 
-+ our protein sequences - protein_sequences.txt
++  rcsb_pdb_8SXU.fasta 
+   +  homologue fasta sequence-
++ protein_sequences.txt
+  + our diploid and tetraploid sequences
++ C_excelsa_V5.fasta
+  + reference genome sequence to Arabidopsis Thaliana
 	
 ---
 > ## 7.2 - Software needed
-+ clustal omega website - 
-+ jalview application -
++ clustal omega website - https://www.ebi.ac.uk/jdispatcher/msa/clustalo
+  + see References_to_tools_and_data.md
++ jalview application - https://www.jalview.org/download/
+  + References_to_tools_and_data.md
 
 ---
 > ## 7.3 - Expected outcome
@@ -156,7 +168,9 @@ These four files we expect (for our 2 proteins) consist of the following:
 ---
 > ## 7.4 - Files (Output)
 + CASP protein alignment- Casp.aln
+  + FIGURE 1
 + Mystery protein alignment (containing 8sxu aligned to both diploid and tetraploid versions of our mystery protein) - Mystery.aln
+  + FIGURE 2
 
 ---
 > ## 8 - Model protein pdb in PYMOL
@@ -178,7 +192,7 @@ App for visualising proteins in 3D - PYMOL V2.5.8
 
 ---
 > ## 8.3 - Expected output
-By following the code in PYMOL_code.txt
+By following the code in PYMOL_code.txt ...
 
 ---
 > ## 8.4 - Files (output)
