@@ -178,17 +178,15 @@ These four files we expect (for our 2 proteins) consist of the following:
 
 ---
 > ## 8.1 - Files (input)
-+ alphafold_rank1_CASP1_diploid.pdb
-+ alphafold_rank1_CASP1_tetraploid.pdb
-+ any_PDB_we_find_for_casp1.pdb
-
 + alphafold_rank1_mystery_diploid.pdb
 + alphafold_rank1_mystery_tetraploid.pdb
-+ 8sxu.pdb
++ 8sxu.pdb / 8sxt.pdb
++ 7n8S.pbd
 
 ---
 > ## 8.2 - Software needed
-App for visualising proteins in 3D - PYMOL V2.5.8
+App for visualising proteins in 3D (PYMOL V2.5.8)
++ see References_to_tools_and_data.md
 
 ---
 > ## 8.3 - Expected output
