@@ -1,0 +1,160 @@
+# First, load your PDB files into PyMOL
+load Desktop/r2/pdb files/dip691_use.pdb , dip_691
+load Desktop/r2/pdb files/tet691_use.pdb , tet_691
+load Desktop/r2/pdb files/8sxt.pdb , 8sxt
+load Desktop/r2/pdb files/7n8s.pdb , 7n8s
+
+#if the structures are similar and aligned in the same orientation, they might be overlapping in the workspace, making it seem like there's only one structure visible.
+#If the structures are similar, you can use the super command to align them and see the differences
+super dip_691, tet_691
+
+#if you want to move objects instead of them overlapping on top of each other you can move them using the 'translate' command
+
+translate [80,0,0], dip_691  
+translate [80,0,0], 8sxt
+
+#align one at a time
+
+align 8sxt, tet_691
+align 7n8s, tet_691
+
+align 8sxt, dip_691
+align 7n8s, dip_691
+
+
+
+# Color areas where there are differences between the dips and tets:
+color hotpink, (dip_691 and resi 35)
+color hotpink, (dip_691 and resi 710)
+color hotpink, (dip_691 and resi 828)
+
+color hotpink, (tet_691 and resi 35)
+color hotpink, (tet_691 and resi 710)
+color hotpink, (tet_691 and resi 828)
+
+# Color important domains for 8sxt:
+
+# Color the RT domain
+color lime, (8sxt and resi 600)
+color lime, (8sxt and resi 702)
+color lime, (8sxt and resi 703)
+
+# Color tower domain
+color lime, (8sxt and resi 254-300)
+color lime, (8sxt and resi 301-370)
+color lime, (8sxt and resi 374-382)  
+color lime, (8sxt and resi 404-419)
+
+# Color wrist domain
+color lime, (8sxt and resi 863-1061)
+
+# Structurally and functionally important residues:
+color lime, (8sxt and resi 605)
+color lime, (8sxt and resi 701)
+color lime, (8sxt and resi 572-588)
+color lime, (8sxt and resi 707)
+
+# Evolutionary important residue:
+color lime, (8sxt and resi 823)
+
+
+#7n8s important domains:
+
+color orange, (7n8s and resi 43)
+color orange, (7n8s and resi 145)
+color orange, (7n8s and resi 147)
+color orange, (7n8s and resi 115)
+color orange, (7n8s and resi 226)
+color orange, (7n8s and resi 145)
+
+#show sticks of mutations:
+show sticks, (tet_691 and resi 35+710+828) 
+show sticks, (dip_691 and resi 35+710+828) 
+
+show sticks, (8sxt and resi 600+702+703+'254-300'+'301-370'+'374-382'+'404-419'+'863-1061'+605+701+'572-588'+707+823) 
+show sticks, (7n8s and resi 43+145+147+115+226+145)
+
+
+#label mutations:
+select my_residue, /tet_691//A/710/CA
+label my_residue, "%s%s" % (resn, resi)
+
+select my_residue, /tet_691//A/LEU`35/CA
+label my_residue, "%s%s" % (resn, resi)
+
+select my_residue,  /tet_691//A/ARG`828/CA
+label my_residue, "%s%s" % (resn, resi)
+
+select my_residue, /dip_691//A/ARG`710/CA
+label my_residue, "%s%s" % (resn, resi)
+
+
+select my_residue, /dip_691//A/PHE`35/CA
+label my_residue, "%s%s" % (resn, resi)
+
+select my_residue, /dip_691//A/LYS`828/CA
+label my_residue, "%s%s" % (resn, resi)
+
+
+#label conserved areas near mutations:
+
+#Tetraploid:
+select my_residue, /8sxt//A/417/CA
+label my_residue, "%s%s" % (resn, resi)
+
+select my_residue, /7n8s//A/GLU`43/CA
+label my_residue, "%s%s" % (resn, resi)
+
+
+select my_residue, /8sxt//A/LEU`872/CD2
+label my_residue, "%s%s" % (resn, resi)
+
+
+#Diploid:
+select my_residue, /7n8s//A/GLU`43/C
+label my_residue, "%s%s" % (resn, resi)
+
+
+select my_residue, /8sxt//A/HIS`417/CE1
+label my_residue, "%s%s" % (resn, resi)
+
+
+select my_residue, /8sxt//A/LEU`872/CD1
+label my_residue, "%s%s" % (resn, resi)
+
+
+
+#distances between residues (after aligning):
+
+distance /tet_691//A/710/CA, /8sxt//A/417/CA
+distance /tet_691//A/LEU`35/CA, /7n8s//A/GLU`43/CA
+distance /tet_691//A/ARG`828/CA, /8sxt//A/LEU`872/CD2
+
+
+
+distance /dip_691//A/PHE`35/CA, /7n8s//A/GLU`43/C
+distance /dip_691//A/ARG`710/CA, /8sxt//A/HIS`417/CE1
+distance /dip_691//A/LYS`828/CA, /8sxt//A/LEU`872/CD1
+
+
+#hydrophobicity/polarity:
+
+#run the script For hydrophobicity/polarity
+run /Users/yaz/Desktop/r2/pyMOL_Tutorial/color_h.py
+
+# Apply the color function to the loaded objects
+color_h tet_691
+color_h dip_691
+
+
+
+#apbs had to do on website as the pluggin did not work for me
+#open .pml file
+
+load /Users/yaz/Desktop/r2/tet691_PyMol_apbs/tetra691_PyMol.pml, tet691_charge
+
+load /Users/yaz/Desktop/r2/dip691_PyMol_apbs/dip691.pml, dip691_charge
+
+select resi 35
+select resi 710
+select resi 828

@@ -10,7 +10,7 @@
 # conda V23.9.0
 # bcftools V1.11
 # samtools V1.3.1
-# vcftools V0.1.16
+
 
 ## Files for MAC method
 # Reference genome fasta file -> C_excelsa_V5.fasta
@@ -30,8 +30,8 @@ export PATH=/Users/yaz/miniconda3/condabin:$PATH
 source /Users/yaz/miniconda3/etc/profile.d/conda.sh
 
 ## 1.2) install all software needed to base conda environment
-conda install -c bioconda samtools
-conda install -c bioconda bcftools
+conda install -c bioconda samtools=1.3.1 -y
+conda install -c bioconda bcftools=1.11 -y
 
 ## 2) activate conda base environment
 conda activate

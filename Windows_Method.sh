@@ -39,7 +39,10 @@ source /home/sam/miniconda3/etc/profile.d/conda.sh
 ## 1) Set up Bcftools environment in conda
 
 #create bcftools environment (including tabix as well for compression)
-conda create -n bcftools_env bcftools tabix
+# for all installs use "-y" flag to automatically install
+conda create -n bcftools_env 
+conda install bcftools=1.19.1 -y
+conda install tabix=1.19.1 -y
 
 #activate environment
 conda activate bcftools_env
@@ -64,7 +67,8 @@ bcftools index -t filtered_UK_scan_tets.vcf.gz
 conda deactivate
 
 # create samtools environment
-conda create -n samtools samtools
+conda create -n samtools 
+conda install samtools=1.19.2 -y
 
 # activate the samtools environment
 conda activate samtools
