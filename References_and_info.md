@@ -25,7 +25,7 @@
 > > + accession date - 26/02/2024
 
 > ## APBS website
-> > + link - https://server.poissonboltzmann.org/apbs
+> > + link - https://server.poissonboltzmann.org
 > > + accession date - 16/04/2024
 > > + publication (DOI) - https://doi.org/10.1002/pro.3280
 > > + APBS
