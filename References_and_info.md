@@ -26,6 +26,21 @@
 
 > ## APBS website
 > > + link - https://server.poissonboltzmann.org/apbs
+> > + accession date - 16/04/2024
+> > + publication (DOI) - https://doi.org/10.1002/pro.3280
+> > + APBS
+> >     + V3.4.1
+> >     + Github - https://github.com/Electrostatics/apbs
+> > + Backend Services 
+> >     + Build commit hash - 82a6669
+> >     + Github - https://github.com/Electrostatics/apbs-aws
+> > + PDB2PQR - 
+> >     + V3.6.1
+> >     + Github - https://github.com/Electrostatics/pdb2pqr
+> > + Website 
+> >     + Build commmit hash - f6a1ca3
+> >     + github - https://github.com/Electrostatics/apbs-web
+> > + citation summary source - https://server.poissonboltzmann.org/about#citations
 ----
 # SCRIPTS
 > ## color_h.py
