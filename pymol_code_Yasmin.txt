@@ -146,15 +146,25 @@ run /Users/yaz/Desktop/r2/pyMOL_Tutorial/color_h.py
 color_h tet_691
 color_h dip_691
 
-
-
-#apbs had to do on website as the pluggin did not work for me
-#open .pml file
-
+# Protein charge 
+# apbs had to do on website as the pluggin did not work for me
+# repeat these steps for diploid and tetraploid version of protein
+# 1) Follow link to https://server.poissonboltzmann.org
+# 2) Select PDB2PQR with the following options
+# #  2.1) "Upload PDB file" (then select the pdb file for diploid/tetraploid of the protein)
+# #  2.2) "pKa Options" leave at pH 7.0 and "Use PROPKA to assign protonation states at provided pH" ticked
+# #  2.3) "Forecefield Options" Set to "PARSE" 
+# #  2.4) "Output naming scheme" set to "Internal naming scheme"
+# #  2.5) "Additional Options" Tick box 1,2,4 and 9 (1 being the top box, 9 being the bottom one)
+# 3) Click "Use results with APBS"
+# 4) Leave all stage 4 settings as default and download the ".dx" file. 
+# 5) Then click on "View in 3Dmol"
+# 6) Leave surface potential as defaults (-5,5) but "export as" should be "PyMol"
+# 7) open .pml file
+# code for opening .pml file for both tetraploid and diploid proteins
 load /Users/yaz/Desktop/r2/tet691_PyMol_apbs/tetra691_PyMol.pml, tet691_charge
-
 load /Users/yaz/Desktop/r2/dip691_PyMol_apbs/dip691.pml, dip691_charge
-
+# levels can be changed in pymol under "Action" and selecting the Range
 select resi 35
 select resi 710
 select resi 828

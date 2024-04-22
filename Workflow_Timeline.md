@@ -190,19 +190,20 @@ These four files we expect (for our 2 proteins) consist of the following:
 + App for visualising proteins in 3D (PYMOL V2.5.8)
   + see References_and_info.md
 + Website for visualising the charge (if apbs plugin in PYMOL doesnt work)
-  + APBS site- https://server.poissonboltzmann.org/apbs
+  + APBS site- https://server.poissonboltzmann.org
 + Python installed onto your machine for running the color_h.py script in PYMOL
   + see References_and_info.md for version
 ---
 > ## 8.3 - Expected output
-By following the code in pymol_code_Yasmine.txt you will have all necessary outputs for structure figures in the writeup. Features of these figures include:
+By following the code in pymol_code_Yasmine.txt you will have all necessary outputs for structure figures in the writeup. This script also details the instructions to view the Protein charge using the APBS website.
+Features of these figures include:
 + Alignment of diploid and tetraploid versions of the proteins to 8sxt and 7n8s
 + Residue highlighting at differences between diploid and tetraploids
 + Highlighting of important domains on both 8sxt and 7n8s
 + Highlighting of conserved regions around the mutations
 + Distance measurements between mutated and conserved residues
 + Hydrophobicity inspection
-+ Protein charge inspection
++ Protein charge inspection (website instructions at end of pymold_code_Yasmin.txt)
 
 ---
 > ## 8.4 - Files (output)

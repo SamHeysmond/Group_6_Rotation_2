@@ -38,5 +38,6 @@ This README.md file explains what each of the files on the github contains follo
 
 > ## pymol_code_Yasmin.txt
 + Code for creating figure images in pymol
++ Instructions for obtaining protein charge information from APBS website
 + For Authorship and information see "References_and_info.md"
 ---
