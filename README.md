@@ -32,7 +32,7 @@ This README.md file explains what each of the files on the github contains follo
       + Github links to tools
       + Scripts and software that were used
 ---
-> ## PYMOL_code
+> ## color_h.py
 + For Authorship and information see "References_and_info.md"
 + Code used to create a hyrophobicity scale on the aligned proteins
 

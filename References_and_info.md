@@ -5,7 +5,7 @@
 ---
 # WEBSITES 
 > ## orf finder
->> + link - 
+>> + link - https://www.ncbi.nlm.nih.gov/orffinder/
 >> + accession date - 26/08/2024
 
 > ## pdb
